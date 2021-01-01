@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Example Title</title>
+</head>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            background-color:black; margin:0px; font-size:0px; height:100%;
+        }
+        .logo{
+            width:35%; height: 40%; display:inline-block;
+            vertical-align: top; position: relative; top:27%;
+        }
+        .main{
+            width:65%; height: 100%; display:inline-block; vertical-align: top;
+        }
+        #loginBox{
+            width: 60%; position:relative; left: 50%;
+            transform:translate(-50%,0%);
+        }
+        .loginText{
+            width: 100%; position:relative; color: white;
+        }
+        #loginText{
+            font-size:60px; margin:0; display:inline-block;
+        }
+        #newUser{
+            position: absolute; bottom:0; right: 0;background-color: rgba(0,0,0,0); 
+            border: 0px; color: white; font-size: 20px;
+        }
+        #userID{
+            background-color: rgba(64, 66, 69, 0.5); border: none;
+            width: calc(100% - 48px); margin-top: 20px; padding: 21px 24px 21px 24px; text-align: left; color: white; font-size: 20px; border-radius: 10px;
+        }
+        #userPW{
+            background-color: rgba(64, 66, 69, 0.5); border: none;
+            width: calc(100% - 48px); margin-top: 20px; padding: 21px 24px 21px 24px; text-align: left; color: white; font-size: 20px; border-radius: 10px;
+        }
+        #Login{
+            background-color: #1fff5a;margin-top: 20px;border: 0px; color: black;
+            border-radius: 10px; width: 100%; display: inline-block; font-size: 24px; padding: 17px 0px; transition-duration: 0.2s;
+        }
+        #Login:hover{
+            color: white;
+        }
+        #menuBox{
+            height: 50%;width: 60%; position: relative; top: 50%;left: 50%; transform: translate(-50%,-50%)
+        }
+        #List{
+            font-size: 60px; border-radius: 10px;background-color: #404245;border: none;color: white;text-align: left; width: 100%; height: 22%; margin-bottom: 5%; position: relative; left: -10%; padding-left: 24px;
+        }
+        #List:hover{
+            
+        }
+        #community{
+            font-size: 60px; border-radius: 10px;background-color: #404245;border: none;color: white;text-align: left; width: 100%; height: 22%; margin-bottom: 5%; padding-left: 24px;
+        }
+        #mypage{
+            font-size: 60px; border-radius: 10px;background-color: #404245;border: none;color: white;text-align: left; width: 100%; height: 22%; position: relative; left: 10%; padding-left: 24px;
+        }
+    </style>
+<body>
+    <logo>
+    </logo>
+    <div class="logo">
+        <form id="loginBox">
+            <div class="loginText">
+                <h1 id="loginText">로그인</h1>
+                <input type="button" id="newUser" name="newUser" value="회원가입"/>
+            </div>
+            <input type="text" id="userID" name="userID" placeholder="아이디 또는 이메일주소"/><br>
+            <input type="password" id="userPW" name="userPW" placeholder="비밀번호"/><br>
+            <input type="button" id="Login" name="Login" value="Login"/>
+        </form>
+    </div>
+    <div class="main">
+        <form id="menuBox">
+            <input type="button" id="List" name="List" value="List"/><br>
+            <input type="button" id="community" name="community" value="Community"/><br>
+            <input type="button" id="mypage" name="mypage" value="MyPage"/><br>
+        </form>
+    </div>
+</body>
+</html>
