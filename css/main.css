@@ -1,0 +1,53 @@
+#loginBox{
+    width: 70%; position:relative; left: 50%;
+    transform:translate(-50%,0%);
+}
+.loginText{
+    width: 100%; position:relative; color: white;
+}
+#loginText{
+    font-size:60px; margin:0; display:inline-block;
+}
+#newUser{
+    position: absolute; bottom:0; right: 0;background-color: rgba(0,0,0,0); 
+    border: 0px; color: white; font-size: 20px;
+}
+#userID{
+    background-color: rgba(64, 66, 69, 0.5); border: none; width: calc(100% - 48px); margin-top: 20px;
+     padding: 21px 24px 21px 24px; text-align: left; color: white; font-size: 20px; border-radius: 10px;
+}
+#userPW{
+    background-color: rgba(64, 66, 69, 0.5); border: none; width: calc(100% - 48px); margin-top: 20px;
+     padding: 21px 24px 21px 24px; text-align: left; color: white; font-size: 20px; border-radius: 10px;
+}
+#Login{
+    background-color: #1fff5a; margin-top: 20px; border: 0px; color: black; border-radius: 10px; width: 100%;
+     display: inline-block; font-size: 24px; padding: 17px 0px;
+}
+#Login:hover{
+    color: white; transition-duration: 0.2s;
+}
+#menuBox{
+    height: 50%; width: 60%; position: relative; top: 50%;left: 50%; transform: translate(-50%,-50%)
+}
+#PlayList{
+    font-size: 60px; border-radius: 10px;background-color: #404245;border: none;color: white;text-align: left;
+    width: 100%; height: 22%; margin-bottom: 5%; position: relative; left: -10%; padding-left: 24px;
+}
+#PlayList:hover{
+    transition-duration: 1s; padding-left: 30%;
+}
+#community{
+    font-size: 60px; border-radius: 10px;background-color: #404245;border: none;color: white;text-align: left;
+    width: 100%; height: 22%; margin-bottom: 5%; padding-left: 24px;
+}
+#community:hover{
+    padding-left: 22%; transition-duration: 1s;
+}
+#mypage{
+    font-size: 60px; border-radius: 10px;background-color: #404245;border: none;color: white;text-align: left;
+    width: 100%; height: 22%; position: relative; left: 10%; padding-left: 24px;
+}
+#mypage:hover{
+    padding-left: 30%; transition-duration: 1s;
+}

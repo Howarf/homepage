@@ -2,97 +2,79 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Howarf's Foge</title>
+    <title>Howarf's Foge</title>
+    <link rel="stylesheet" type="text/css" href="./css/case.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
+    <script>
+        let loginck=false;
+        function LoginClick(){
+            const id = document.getElementById('userID').value;
+            const pw = document.getElementById('userPW').value;
+            if(!id||!pw){
+                alert("아이디나 패스워드를 입력하십시오.")
+            }
+            else{
+                //db에서 체크후 있을경우 로그인
+                document.getElementById("loginBox").innerHTML="<p>"+id+"</p>";
+                loginck=true;
+            }
+        }
+        function mypageError(){
+            if(!loginck){
+                alert("로그후 사용가능합니다.");
+            }
+            else{
+                location.href='/myPage.html'
+            }
+        }
+        function Community(){
+            location.href='/playList.html'
+        }
+        function newUser(){
+            window.open("http://www.naver.com");
+        }
+    </script>
     <style>
-        html{
-            height: 100%;
+        #body{
+            width: 100%;height: 100%;
         }
-        body{
-            background-color:black; margin:0px; font-size:0px; height:100%;
-        }
-        .logo{
-            width:35%; height: 40%; display:inline-block;
-            vertical-align: top; position: relative; top:27%;
-        }
-        .main{
-            width:65%; height: 100%; display:inline-block; vertical-align: top;
-        }
-        #loginBox{
-            width: 70%; position:relative; left: 50%;
-            transform:translate(-50%,0%);
-        }
-        .loginText{
-            width: 100%; position:relative; color: white;
-        }
-        #loginText{
-            font-size:60px; margin:0; display:inline-block;
-        }
-        #newUser{
-            position: absolute; bottom:0; right: 0;background-color: rgba(0,0,0,0); 
-            border: 0px; color: white; font-size: 20px;
-        }
-        #userID{
-            background-color: rgba(64, 66, 69, 0.5); border: none; width: calc(100% - 48px); margin-top: 20px;
-             padding: 21px 24px 21px 24px; text-align: left; color: white; font-size: 20px; border-radius: 10px;
-        }
-        #userPW{
-            background-color: rgba(64, 66, 69, 0.5); border: none; width: calc(100% - 48px); margin-top: 20px;
-             padding: 21px 24px 21px 24px; text-align: left; color: white; font-size: 20px; border-radius: 10px;
-        }
-        #Login{
-            background-color: #1fff5a; margin-top: 20px; border: 0px; color: black; border-radius: 10px; width: 100%;
-             display: inline-block; font-size: 24px; padding: 17px 0px; transition-duration: 0.2s;
-        }
-        #Login:hover{
-            color: white;
-        }
-        #menuBox{
-            height: 50%;width: 60%; position: relative; top: 50%;left: 50%; transform: translate(-50%,-50%)
+        #listBox{
+            width: 80%; height: 80%; background-color: white;
         }
         #List{
-            font-size: 60px; border-radius: 10px;background-color: #404245;border: none;color: white;text-align: left;
-             width: 100%; height: 22%; margin-bottom: 5%; position: relative; left: -10%; padding-left: 24px;
-             transition-duration: 1s;
+            width: 90%; height: 20%; background-color: bisque;
         }
-        #List:hover{
-            padding-left: 30%;
+        #imgBox{
+            width: 20%; height: 100%; background-color: black; display: inline-block;
         }
-        #community{
-            font-size: 60px; border-radius: 10px;background-color: #404245;border: none;color: white;text-align: left;
-             width: 100%; height: 22%; margin-bottom: 5%; padding-left: 24px; transition-duration: 1s;
+        #informationBox{
+            width: 75%; display: inline-block; background-color:aqua;
         }
-        #community:hover{
-            padding-left: 22%;
-        }
-        #mypage{
-            font-size: 60px; border-radius: 10px;background-color: #404245;border: none;color: white;text-align: left;
-             width: 100%; height: 22%; position: relative; left: 10%; padding-left: 24px; transition-duration: 1s;
-        }
-        #mypage:hover{
-            padding-left: 30%;
+        p{
+            color: #1fff5a; font-size: 60px; margin: 0px;
         }
     </style>
 <body>
-    <logo>
-    </logo>
-    <div class="logo">
-        <form id="loginBox">
-            <div class="loginText">
-                <h1 id="loginText">로그인</h1>
-                <input type="button" id="newUser" name="newUser" value="회원가입"/>
-            </div>
-            <input type="text" id="userID" name="userID" placeholder="아이디 또는 이메일주소"/><br>
-            <input type="password" id="userPW" name="userPW" placeholder="비밀번호"/><br>
-            <input type="button" id="Login" name="Login" value="Login"/>
-        </form>
-    </div>
-    <div class="main">
-        <form id="menuBox">
-            <input type="button" id="List" name="List" value="PlayList"/><br>
-            <input type="button" id="community" name="community" value="Community"/><br>
-            <input type="button" id="mypage" name="mypage" value="MyPage"/><br>
-        </form>
+    <div id="body">
+        <div class="logo">
+            <form id="loginBox">
+                <div class="loginText">
+                    <h1 id="loginText">로그인</h1>
+                    <input type="button" id="newUser" name="newUser" value="회원가입" onclick="newUser()"/>
+                </div>
+                <input type="text" id="userID" name="userID" placeholder="아이디 또는 이메일주소"/><br>
+                <input type="password" id="userPW" name="userPW" placeholder="비밀번호"/><br>
+                <input type="button" id="Login" name="Login" value="Login" onclick="LoginClick();"/>
+            </form>
+        </div>
+        <div class="main">
+            <form id="menuBox">
+                <input type="button" id="PlayList" name="PlayList" value="PlayList" onclick="location.href='/playList.html'"/><br>
+                <input type="button" id="community" name="community" value="Community" onclick="Community()"/><br>
+                <input type="button" id="mypage" name="mypage" value="MyPage" onclick="mypageError();"/><br>
+            </form>
+        </div>
     </div>
 </body>
 </html>
